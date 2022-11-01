@@ -2,7 +2,7 @@
 
 There is a need to pause and restart Synapse SQL Pools on a set schedule to save money. Having the Synapse Pool run 24x7 (There is no idle setting in Synapse SQL Pool unlike Spark Pools) is going to increase the total cost of ownership by a fair bit
 
-Approach 1 - Using Azure Functions 
+**Approach 1 - Using Azure Functions**
 (https://learn.microsoft.com/en-us/azure/azure-functions/functions-overview)
 
 Azure Functions is a serverless solution that allows you incorporate PowerShell scripts to start/pause Synapse SQL Pools on a schedule
@@ -19,7 +19,7 @@ For both the codes, make the changes to reflect your subscription values like Su
 
 
 
-Approach 2 - Using Azure Automation Account
+**Approach 2 - Using Azure Automation Account** 
 (https://github.com/Azure/Azure-Functions/issues/193)
 
 ![Automation Runbook1](https://github.com/ujvalgandhi1/PausingandRestartingSynapsePools/blob/main/Assets/AutomationRunbook-1.png)
