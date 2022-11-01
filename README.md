@@ -19,3 +19,15 @@ For both the codes, make the changes to reflect your subscription values like Su
 
 
 
+Approach 2 - Using Azure Automation Account
+(https://github.com/Azure/Azure-Functions/issues/193)
+
+![Automation Runbook1](https://github.com/ujvalgandhi1/PausingandRestartingSynapsePools/blob/main/Assets/AutomationRunbook-1.png)
+
+![Automation Runbook2](https://github.com/ujvalgandhi1/PausingandRestartingSynapsePools/blob/main/Assets/AutomationRunbook-2.png)
+
+![Automation Runbook3](https://github.com/ujvalgandhi1/PausingandRestartingSynapsePools/blob/main/Assets/AutomationRunbook-3.png)
+
+![Automation Runbook4](https://github.com/ujvalgandhi1/PausingandRestartingSynapsePools/blob/main/Assets/AutomationRunbook-4.png)
+
+
