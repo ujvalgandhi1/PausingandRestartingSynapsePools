@@ -45,3 +45,18 @@ The Pipeline approach is the most expensive because it invovkes Synapse Pipeline
 3. Use GET as Method
 4. Create an User managed identity and for authentication and click the User Identity under the credentials
 
+![Pipeline-3](https://github.com/ujvalgandhi1/PausingandRestartingSynapsePools/blob/main/Assets/Pipeline-3.png)
+Get a For Each loop from the within the activities and then join the first "Get List" activity to this For Each activity
+
+Make sure under Settings for For Each, you have the correct Paramaterized Item value as displayed
+
+![Pipeline-4](https://github.com/ujvalgandhi1/PausingandRestartingSynapsePools/blob/main/Assets/Pipeline-4.png)
+
+Under the For Each loop, add two Web activities and join them together
+
+![Pipeline-5](https://github.com/ujvalgandhi1/PausingandRestartingSynapsePools/blob/main/Assets/Pipeline-5.png)
+Follow the screen prompts to enter data for checking the state of the pool
+
+For the Dynamic content for the URL, use this 
+@concat('https://management.azure.com/subscriptions/',pipeline().parameters.SubscriptionID,'/resourceGroups/',pipeline().parameters.ResourceGroup,'/providers/Microsoft.Synapse/workspaces/',pipeline().parameters.WorkspaceName,'/sqlPools/',item().name,'?api-version=2019-06-01-preview')
+
