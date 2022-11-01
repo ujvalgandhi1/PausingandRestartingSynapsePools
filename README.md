@@ -30,4 +30,7 @@ For both the codes, make the changes to reflect your subscription values like Su
 
 ![Automation Runbook4](https://github.com/ujvalgandhi1/PausingandRestartingSynapsePools/blob/main/Assets/AutomationRunbook-4.png)
 
+Follow the word documents AutomationRunbook-PauseSynapsePool.docx under the Assets folder and place it in the EDIT screen. Then follow instructions on Screenshot 4 to test the automation and finally publish it
+
+
 
