@@ -4,3 +4,6 @@ There is a need to pause and restart Synapse SQL Pools on a set schedule to save
 
 Approach 1 - Using Azure Functions 
 (https://learn.microsoft.com/en-us/azure/azure-functions/functions-overview)
+
+Azure Functions is a serverless solution that allows you incorporate PowerShell scripts to start/pause Synapse SQL Pools on a schedule
+[FunctionApp1](!https://github.com/ujvalgandhi1/PausingandRestartingSynapsePools/blob/main/Assets/FunctionApp-1.png)
