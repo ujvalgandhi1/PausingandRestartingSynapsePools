@@ -60,3 +60,16 @@ Follow the screen prompts to enter data for checking the state of the pool
 For the Dynamic content for the URL, use this 
 @concat('https://management.azure.com/subscriptions/',pipeline().parameters.SubscriptionID,'/resourceGroups/',pipeline().parameters.ResourceGroup,'/providers/Microsoft.Synapse/workspaces/',pipeline().parameters.WorkspaceName,'/sqlPools/',item().name,'?api-version=2019-06-01-preview')
 
+
+![Pipeline-6](https://github.com/ujvalgandhi1/PausingandRestartingSynapsePools/blob/main/Assets/Pipeline-6.png)
+
+For the actual pausing, get another Web Activity and use the following as the dynamic content for the URL
+@concat('https://management.azure.com/subscriptions/',pipeline().parameters.SubscriptionID,'/resourceGroups/',pipeline().parameters.ResourceGroup,'/providers/Microsoft.Synapse/workspaces/',pipeline().parameters.WorkspaceName,'/sqlPools/',activity('CheckState').output.name,'/pause?api-version=2019-06-01-preview')
+
+You can then set a trigger for the Pipeline which will pause the pools at the time you have specified
+
+For the restarting of the pipelines, all the steps are same, except the last one where you have to use the following Dynamic Content URL
+
+@concat('https://management.azure.com/subscriptions/',pipeline().parameters.SubscriptionID,'/resourceGroups/',pipeline().parameters.ResourceGroup,'/providers/Microsoft.Synapse/workspaces/',pipeline().parameters.WorkspaceName,'/sqlPools/',activity('CheckState').output.name,'/resume?api-version=2019-06-01-preview')
+
+
