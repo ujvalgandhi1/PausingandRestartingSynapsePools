@@ -34,4 +34,14 @@ Follow the word documents AutomationRunbook-PauseSynapsePool.docx under the Asse
 
 
 **Approach 3 - Synapse Pipelines**
+The Pipeline approach is the most expensive because it invovkes Synapse Pipelines to call in the REST APIs being used for Synapse management. However, it is the easisest to put together
+
+![Pipeline-1](https://github.com/ujvalgandhi1/PausingandRestartingSynapsePools/blob/main/Assets/Pipeline-1.png)
+
+![Pipeline-2](https://github.com/ujvalgandhi1/PausingandRestartingSynapsePools/blob/main/Assets/Pipeline-2.png)
+1. Get Web Activity and rename it as "Get List"
+2. Click the "Add Dynamic Content" under URL and paste this in the URL 
+@concat('https://management.azure.com/subscriptions/',pipeline().parameters.SubscriptionID,'/resourceGroups/',pipeline().parameters.ResourceGroup,'/providers/Microsoft.Synapse/workspaces/',pipeline().parameters.WorkspaceName,'/sqlPools?api-version=2019-06-01-preview')
+3. Use GET as Method
+4. Create an User managed identity and for authentication and click the User Identity under the credentials
 
