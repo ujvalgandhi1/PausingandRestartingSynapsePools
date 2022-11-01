@@ -33,4 +33,5 @@ For both the codes, make the changes to reflect your subscription values like Su
 Follow the word documents AutomationRunbook-PauseSynapsePool.docx under the Assets folder and place it in the EDIT screen. Then follow instructions on Screenshot 4 to test the automation and finally publish it
 
 
+**Approach 3 - Synapse Pipelines**
 
